@@ -6,22 +6,23 @@ namespace large
 {
     class family
     {
-        public delegate void coc();
-        public event coc c;
         public int Count_of_child { get; set; }
         public string Surename { get; set; }
         public bool large { get; set; }
+        public int benefit { get; set; }
         public override string ToString()
         {
-            return $"Фамилия семьи:{Surename} Многодетная:{large}";
+            return $"Фамилия семьи:{Surename} Многодетная:{large} Пособие={benefit}";
         }
-        public family(int coc)
+  
+        public void lrg()
         {
-            if (coc >= 3)
+            if (this.Count_of_child >= 3)
             {
-                c?.Invoke();
-                large = true;
+                this.large = true;
+                benefit += 500;
             }
         }
+       
     }
 }

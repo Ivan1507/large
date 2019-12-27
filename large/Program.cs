@@ -6,10 +6,13 @@ namespace large
     {
         static void Main(string[] args)
         {
-            var Pis = new family(5)
+            var Pis = new family()
             {
-               Surename="Пискарев"
+                Count_of_child=-1,
+               Surename="Пискарев",
+               benefit=300
             };
+            Pis.lrg();
             Console.WriteLine(Pis.ToString());
         }
     }
