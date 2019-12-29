@@ -6,7 +6,25 @@ namespace large
 {
     class family
     {
-        public int Count_of_child { get; set; }
+        public int  Count_of_child { get; set; }
+        public int coc
+        {
+            get
+            {
+                return Count_of_child;
+            }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new Exception("Детей не может быть меньше 0");
+                }
+                else
+                {
+                    Count_of_child = value;
+                }
+            }
+        }
         public string Surename { get; set; }
         public bool large { get; set; }
         public int benefit { get; set; }
