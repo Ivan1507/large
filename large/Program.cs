@@ -6,23 +6,23 @@ namespace large
     {
         static void Main(string[] args)
         {
-            try
-            {
-                var Piskarev = new family()
-                {
-                    coc = 5,
-                    Surename = "Пискарев",
-                    benefit = 300
-                };
-                Piskarev.lrg();
-                Console.WriteLine(Piskarev.ToString());
-            }
-            catch(Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            //try
+            //{
+            //    var Piskarev = new family()
+            //    {
+            //        coc = 5,
+            //        Surename = "Пискарев",
+            //        benefit = 300
+            //    };
+            //    Piskarev.lrg();
+            //    Console.WriteLine(Piskarev.ToString());
+            //}
+            //catch(Exception e)
+            //{
+            //    Console.WriteLine(e.Message);
+            //}
 
-   
+
             //var Razinkin = new family()
             //{
             //    Count_of_child = 5,
@@ -31,12 +31,14 @@ namespace large
             //};
             //Razinkin.lrg();
             //Console.WriteLine(Razinkin.ToString());
-            //var Ivan = new child()
-            //{
+            var Ivan = new child()
+            {
+                stud_bilet="8172602",
+                num_of_coures=3
+            };
+            Console.WriteLine(Ivan.ToString());
+            Ivan.output();
 
-            //};
-            //Ivan.output();
-            
         }
     }
 }
