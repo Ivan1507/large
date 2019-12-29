@@ -34,11 +34,15 @@ namespace large
             var Ivan = new child()
             {
                 stud_bilet="8172602",
-                num_of_coures=3
+                num_of_coures=3,
+                scholaship=1700
             };
             Console.WriteLine(Ivan.ToString());
             Ivan.output();
+            Console.WriteLine(Ivan.ToString());
 
         }
+
+         
     }
 }
