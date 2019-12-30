@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace large
 {
@@ -31,18 +32,25 @@ namespace large
             //};
             //Razinkin.lrg();
             //Console.WriteLine(Razinkin.ToString());
+            string path = @"C:\Users\Иван\Desktop\1.txt";
             var Ivan = new child()
             {
-                stud_bilet="8172602",
-                num_of_coures=3,
-                scholaship=1700
+                stud_bilet = "8170828",
+                num_of_coures = 2,
+                scholaship = 2500
             };
             Console.WriteLine(Ivan.ToString());
             Ivan.output();
             Console.WriteLine(Ivan.ToString());
-
+            string text = Ivan.ToString();
+            using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.UTF8))
+            {
+                sw.WriteLine(text);
+            }
+            
         }
-
-         
     }
 }
+
+
+       
