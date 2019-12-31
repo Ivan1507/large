@@ -41,6 +41,10 @@ namespace large
                 benefit += 500;
             }
         }
+        public void dvo()
+        {
+            benefit -=200;
+        }
        
     }
 }

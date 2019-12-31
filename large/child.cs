@@ -7,9 +7,9 @@ namespace large
    
     class child
     {
-        public delegate void del(string mes);
-        public del d;
-        //public event del d;
+        public delegate void del();
+        public event del d;
+         
        
         List<string> subj = new List<string>() {
             "Английский",
@@ -28,14 +28,27 @@ namespace large
             {
                 Console.Write(pair+" -");
                 x=int.Parse(Console.ReadLine());
-                switch (x)
+                if (x == 2)
                 {
-                    case 2:
-                        scholaship = 0;
-                        break;
+                    d?.Invoke();
+                    scholaship = 0;
+                     
                 }
+                      
+                
             }
 
+        }
+        public void Del()
+        {
+            int x = 10;
+            for (int i=0;i<15;i++)
+            {
+                if (i == 3)
+                {
+                    d?.Invoke();
+                }
+            }
         }
         
        

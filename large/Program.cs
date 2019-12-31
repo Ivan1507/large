@@ -32,6 +32,7 @@ namespace large
             //};
             //Razinkin.lrg();
             //Console.WriteLine(Razinkin.ToString());
+            #region
             string path = @"C:\Users\Иван\Desktop\1.txt";
             var Ivan = new child()
             {
@@ -40,14 +41,24 @@ namespace large
                 scholaship = 2500
             };
             Console.WriteLine(Ivan.ToString());
-            Ivan.output();
-            Console.WriteLine(Ivan.ToString());
-            string text = Ivan.ToString();
-            using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.UTF8))
+         
+            //string text = Ivan.ToString();
+            //using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.UTF8))
+            //{
+            //    sw.WriteLine(text);
+            //}
+            var Kraev = new family()
             {
-                sw.WriteLine(text);
-            }
-            
+                benefit = 500,
+                Count_of_child = 3,
+            };
+            Kraev.lrg();
+            Console.WriteLine(Kraev.ToString());
+            Ivan.d += Kraev.dvo;
+            Ivan.output();
+            Console.WriteLine(Kraev.ToString());
+            #endregion
+
         }
     }
 }
